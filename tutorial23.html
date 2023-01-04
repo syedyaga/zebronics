@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box{
+            font-size: 50px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            display: none;
+            
+        }
+     @media(max-width:466px){
+        #box1{
+            display: block;
+        }
+
+     }  
+     @media (min-width:467px ) and (max-width:1000px) {
+        #box2{
+            display: block;
+            background-color: aqua;
+        }
+     }
+     @media (min-width:1001px ) and (max-width:1500px) {
+        #box3{
+            display: block;
+           background-color: blueviolet;
+        }
+     }
+       
+       
+   
+        </style>
+</head>
+<body>
+    <div class="box" id="box1">Main ek chutiya hu</div>
+    <div class="box" id="box2">Tum ek chutiya hoo</div>
+    <div class="box" id="box3">Ham sab ek chutiya hain</div>
+    <div class="box" id="box4">Chutiyas are the best</div>
+</body>
+</html>
