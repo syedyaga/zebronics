@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+             grid-template-areas: 
+             'navbar navbar navbar navbar' 
+            'section section section section'
+            'aside aside aside aside        '
+            'footer footer footer footer'; 
+                                
+        }
+    
+    @media only screen and (max-width:300px){
+        
+        body{
+            background-color: red;
+
+            }
+        }
+        @media only screen and (min-width: 300px) and (max-width:1000px){
+            body{
+                
+                background-color: blueviolet;
+            }
+        }
+        @media (min-width: 1000px) and (max-width:2000px){
+            body{
+                
+                background-color: yellow;
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 
+             'navbar navbar navbar navbar' 
+            'section section section section'
+            'footer footer footer footer';  
+            }
+        }
+        @media (min-width: 2000px) {
+            body{
+              
+                background-color: rgb(241, 34, 34);
+            }
+        }
+       .bdr{
+        border: 2px solid black;
+        padding: 10px 23px;
+        background-color: wheat;
+       }
+       nav{
+        grid-area: navbar;
+    
+       }
+       section{
+        grid-area: section;
+       }
+       aside{
+        grid-area: aside;
+       }
+       footer{
+        grid-area: footer;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="bdr">
+            Home AboutUs Contact
+        </nav>
+        <section class="bdr">Learn how to Fuck in Hindi</section>
+        <aside>
+            <H1 class="bdr" >More about us</H1>
+        </aside>
+    </div>
+    <footer class="bdr"> Copyright CodewithHarry 2020</footer>
+    
+</body>
+</html>
